@@ -1,0 +1,55 @@
+﻿<Window x:Class="FlappyBook.ResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlappyBook"
+        mc:Ignorable="d"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+
+        Title="ResultWindow" Height="500" Width="450" WindowStartupLocation="CenterScreen" FontSize="20" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="Assets/background.png"/>
+    </Window.Background>
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="340" Height="50" Margin="17,-330,0,0">
+            <Image Source="Assets/Letters/letterF.png" Height="35" />
+            <Image Source="Assets/Letters/letterL.png" Height="35" />
+            <Image Source="Assets/Letters/letterA.png" Height="35" />
+            <Image Source="Assets/Letters/letterP.png" Height="35" />
+            <Image Source="Assets/Letters/letterP.png" Height="35" />
+            <Image Source="Assets/Letters/letterY.png" Height="35" />
+            <Separator Width="20" Background="Transparent" />
+            <Image Source="Assets/Letters/letterS.png" Height="35" />
+            <Image Source="Assets/Letters/letterC.png" Height="35" />
+            <Image Source="Assets/Letters/letterO.png" Height="35" />
+            <Image Source="Assets/Letters/letterR.png" Height="35" />
+            <Image Source="Assets/Letters/letterE.png" Height="35" />
+        </StackPanel>
+        <TextBox x:Name="tbScoreBoard" TextAlignment="Center" FontSize="25" Foreground="SkyBlue" Padding="5" Margin="93,99,93.2,313.4" BorderBrush="DeepSkyBlue" IsReadOnly="True">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                    <Setter Property="BorderBrush" Value="Blue"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Image x:Name="MedalGoldImage" Height="124" Width="107" Source="Assets/UI/medalGold.png" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden" Margin="145,193,144.2,153.4" RenderTransformOrigin="0.38,0.508" />
+        <Image x:Name="MedalBronzeImage" Height="124" Width="107" Source="Assets/UI/medalBronze.png" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="145,193,144.2,153.4" Visibility="Hidden" />
+        <Image x:Name="MedalSilverImage" Height="124" Width="107" Source="Assets/UI/medalSilver.png" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="145,193,144.2,153.4" Visibility="Hidden" />
+        <Image x:Name="FeestjeImage" Height="100" Width="70" Source="Assets/UI/Feest.png" Margin="36,153,337.2,167" Visibility="Hidden" ></Image>
+        <Image x:Name="Frog" Height="100" gif:ImageBehavior.AnimatedSource="Assets/UI/Frog.gif" gif:ImageBehavior.AutoStart="True" gif:ImageBehavior.RepeatBehavior="Forever" Visibility="Hidden" Margin="322,273,24.2,97.4"></Image>
+        <Button x:Name="btnAgain" Background="SkyBlue" Content="Opnieuw" Foreground="AliceBlue" Margin="145,349,144.2,73.4" Click="BtnAgain_Click"/>
+        <Image x:Name="FeestjeImage_Copy" Height="100" Width="70" Source="Assets/UI/Feest.png" Margin="349,153,24.2,167" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="277.18"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Frog_Copy" gif:ImageBehavior.AnimatedSource="Assets/UI/Frog.gif" gif:ImageBehavior.AutoStart="True" gif:ImageBehavior.RepeatBehavior="Forever" Visibility="Hidden" Margin="24,267,322.2,97.4"/>
+    </Grid>
+</Window>

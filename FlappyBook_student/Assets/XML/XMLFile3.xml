@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GameLevel number="2">
+  <Settings>
+    <Name>Mania</Name>
+    <Dimensions>
+      <Width>1200</Width>
+      <Height>500</Height>
+    </Dimensions>
+  </Settings>
+  <Blocks>
+    <Block Position="100" GapHeight="150" PositionHeight="200" />
+    <Block Position="250" GapHeight="150" PositionHeight="250" />
+    <Block Position="400" GapHeight="150" PositionHeight="300" />
+    <Block Position="550" GapHeight="150" PositionHeight="280" />
+    <Block Position="700" GapHeight="150" PositionHeight="250" />
+    <Block Position="850" GapHeight="150" PositionHeight="200" />
+    <Block Position="1000" GapHeight="150" PositionHeight="190" />
+  </Blocks>
+</GameLevel>

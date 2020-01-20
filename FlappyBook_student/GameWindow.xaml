@@ -1,0 +1,49 @@
+﻿<Window x:Class="FlappyBook.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlappyBook"
+        mc:Ignorable="d" FontFamily="Arial Black"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        Title="Flappy Book: Game" Height="500" Width="1200" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="Assets/background.png"/>
+    </Window.Background>
+    <Grid>
+        <Grid x:Name="gGame">
+            <Image x:Name="LoserGif_Copy" gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AutoStart="True" Visibility="Hidden" gif:ImageBehavior.AnimatedSource="Assets/UI/Zweter.gif" Height="200" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="689,130,304.6,140.4"/>
+            <!-- TODO: Met code hierin Rectangle elementen -->
+        </Grid>
+        <Grid VerticalAlignment="Top" Height="50">
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/groundIce.png" Stretch="Uniform" Viewport="150,5,550,55" ViewportUnits="Absolute" TileMode="Tile" >
+                    <ImageBrush.Transform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.Transform>
+                </ImageBrush>
+            </Grid.Background>
+            <StackPanel x:Name="spName" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10" />
+            <StackPanel x:Name="spScore" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10" />
+        </Grid>
+        <Grid VerticalAlignment="Bottom" Height="50">
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/groundGrass.png" Stretch="Uniform" TileMode="FlipX" Viewport="0,0,550,55" ViewportUnits="Absolute" />
+            </Grid.Background>
+        </Grid>
+        <Image x:Name="imgPlayer" Height="50" Source="Assets/Planes/planeRed1.png" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,200,0,0" />
+        <Image x:Name="StarImage" Height="30" Source="Assets/starGold.png" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1150,225,10,0" />
+        <Image x:Name="GetReadyImage" Height="50" Source="Assets/UI/textGetReady.png" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <Image x:Name="GameOverImage" Height="50" Source="Assets/UI/textGameOver.png" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed" />
+        <Image x:Name="NumberThree" Height="50" Source="Assets/Numbers/number3.png" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden"></Image>
+        <Image x:Name="NumberTwo" Height="50" Source="Assets/Numbers/number2.png" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden"></Image>
+        <Image x:Name="NumberOne" Height="50" Source="Assets/Numbers/number1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden"></Image>
+        <Image x:Name="LoserGif" gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AutoStart="True" Visibility="Hidden" gif:ImageBehavior.AnimatedSource="Assets/UI/Zweter.gif" Height="200" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="268,128,725.6,142.4"></Image>
+        <TextBlock x:Name="tbEndScore" Height="50" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="497,306,496.6,114.4" TextWrapping="Wrap" FontSize="50" Foreground="SkyBlue"></TextBlock>
+    </Grid>
+</Window>
